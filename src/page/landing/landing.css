@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+
+.jumbotron {
+  padding: 30px; /* fills out the jumbotron */
+  max-width: 100%;
+}
+
+/* .container {
+    width: 5px;
+    margin: 0 auto; 
+    padding: 0 15px;
+  } */
+
+.jumbotron .container {
+  max-width: 100%;
+}
+
+.jumbotron h1 {
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 1.6 rem;
+  text-transform: uppercase;
+}
