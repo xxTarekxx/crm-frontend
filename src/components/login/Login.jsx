@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
 import "./login.css";
 
-const Login = () => {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,19 +21,19 @@ const Login = () => {
               <div className="container">
                 <div className="row">
                   <div className="formBox col-lg-10 col-xl-7 mx-auto">
-                    <h3 className=" text-center">Welcome</h3>
+                    <h3 className=" text-center">Log In To Your XYZ Account</h3>
                     <hr />
                     <form>
                       <div className="loginForm mb-3 pt-4">
                         <FloatingLabel
-                          onChange={handleOnchange}
-                          name="email"
-                          value={email}
                           controlId="floatingInput"
                           label="Email address"
                           className="mb-3"
                         >
                           <Form.Control
+                            onChange={handleOnchange}
+                            name="email"
+                            email={email}
                             type="email"
                             placeholder="name@example.com"
                           />
@@ -43,6 +43,8 @@ const Login = () => {
                           label="Password"
                         >
                           <Form.Control
+                            onChange={handleOnchange}
+                            password={password}
                             type="password"
                             placeholder="Password"
                           />
@@ -75,7 +77,7 @@ const Login = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Login;
 

@@ -1,13 +1,13 @@
-.login,
+.signup,
 .image {
   min-height: 100vh;
 }
-.login{
+.signup{
   font-family: 'Lato', sans-serif;
   background-color: rgb(255, 255, 255);
 }
-.bg-image {
-  background-image: url("./img/signin.jpg");
+.bg-image-signup {
+  background-image: url("./img/welcome.jpg");
   background-size: cover;
   background-position: center center;
 }
