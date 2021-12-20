@@ -1,13 +1,13 @@
-/* .login,
+.landing,
 .image {
   min-height: 100vh;
 }
-.login{
+.landing{
   font-family: 'Lato', sans-serif;
   background-color: rgb(255, 255, 255);
 }
-.bg-image {
-  background-image: url("./img/signin.jpg");
+.bg-image-signin {
+  background-image: url("./img/landingimg.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -15,4 +15,4 @@
 .formBox{
   border-radius: 40px;
   box-shadow: 0px 0px 20px -5px rgb(60, 106, 233);
-} */
+}

@@ -16,6 +16,19 @@ function Signup() {
   const handleOnchange = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
+
+    switch(name){
+      case "email":
+        setEmail(value);
+        break
+
+      case "password":
+        setPassword(value);
+        break;
+
+        default:
+          break;
+    }
   };
   return (
     <div className="maincontainer">
