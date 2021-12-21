@@ -1,8 +1,10 @@
 import React from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
+import PropTypes from "prop-types";
 import "./login.css";
+import { propTypes } from "react-bootstrap/esm/Image";
 
-function Login({ handleOnchange, email, password }) {
+function Login({ handleOnChange, email, password }) {
   return (
     <div className="maincontainer">
       <div className="container-fluid">
@@ -23,11 +25,12 @@ function Login({ handleOnchange, email, password }) {
                           className="mb-3"
                         >
                           <Form.Control
+                            onChange={handleOnChange}
                             value={email}
-                            onChange={handleOnchange}
                             name="email"
                             type="email"
                             placeholder="name@example.com"
+                            required
                           />
                         </FloatingLabel>
                         <FloatingLabel
@@ -35,11 +38,12 @@ function Login({ handleOnchange, email, password }) {
                           label="Password"
                         >
                           <Form.Control
-                            value={password}
-                            onChange={handleOnchange}
+                            onChange={handleOnChange}
+                            // value={password}
                             name="password"
                             type="password"
                             placeholder="Password"
+                            required
                           />
                         </FloatingLabel>
                       </div>
@@ -54,7 +58,7 @@ function Login({ handleOnchange, email, password }) {
                       ))}
                       <div className="gap-2 mt-4 text-center">
                         <button
-                          onClick={handleOnchange}
+                          onClick={handleOnChange}
                           type="submit"
                           className="btn btn-primary px-5 text-uppercase mb-4 rounded-pill shadow-sm"
                         >
@@ -74,6 +78,12 @@ function Login({ handleOnchange, email, password }) {
 }
 
 export default Login;
+
+Login.propTypes = {
+  handleOnChange: PropTypes.func.isRequired,
+  email: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+};
 
 // export default class Login extends React.Component {
 //   render() {
