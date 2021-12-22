@@ -1,18 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Login from "../login/Login";
+import Signup from "../signup/Signup";
 import "./landing.css";
 
 export default function Landing() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const handleOnChange = (e) => {
-    const { name, value } = e.target;
-    console.log(name, value);
-  };
   return (
     <div>
-      <Login handleOnchange={handleOnChange} email={email} password={password} />
+      <Login />
+      <Signup />
     </div>
   );
 }
