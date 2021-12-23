@@ -3,8 +3,8 @@ import { Form, Button, Col, Row } from "react-bootstrap";
 import "./signup.css";
 
 export default class Signup extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       email: "",
       password: "",
@@ -13,7 +13,8 @@ export default class Signup extends Component {
       company: "",
       phone: "",
       city: "",
-      stateName: ""
+      stateName: "",
+      zipcode: "",
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -24,6 +25,14 @@ export default class Signup extends Component {
       [name]: value,
     });
   }
+
+  // handleOnSubmit(event){
+  //   event.preventDefault();
+
+  //   if(!email || !password){
+  //     return alert("Please fill all the fields")
+  //   }
+  // }
 
   render() {
     return (
@@ -38,7 +47,7 @@ export default class Signup extends Component {
                     <div className=" formBox col-lg-10 col-xl-7 mx-auto">
                       <h3 className="display-4 text-center">Registration</h3>
                       <hr />
-                      <Form className="py-4">
+                      <Form className="py-4" >
                         <Row className="mb-3">
                           <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Email</Form.Label>
@@ -64,10 +73,7 @@ export default class Signup extends Component {
                             />
                           </Form.Group>
                         </Row>
-                        <Form.Group
-                          className="mb-3"
-                          controlId="formGridAddress2"
-                        >
+                        <Form.Group className="mb-3" controlId="phoneNumber">
                           <Form.Label>Phone Number</Form.Label>
                           <Form.Control
                             onChange={this.handleChange}
@@ -108,10 +114,7 @@ export default class Signup extends Component {
                           />
                         </Form.Group>
 
-                        <Form.Group
-                          className="mb-3"
-                          controlId="formGridAddress2"
-                        >
+                        <Form.Group className="mb-3" controlId="companyName">
                           <Form.Label>Company Legal Name</Form.Label>
                           <Form.Control
                             onChange={this.handleChange}
@@ -122,7 +125,6 @@ export default class Signup extends Component {
                             required
                           />
                         </Form.Group>
-
 
                         <Row className="mb-3">
                           <Form.Group as={Col} controlId="formGridCity">
@@ -145,7 +147,6 @@ export default class Signup extends Component {
                               name="stateName"
                               type="text"
                               required
-                              defaultValue="Choose..."
                             >
                               <option value={null}>Choose....</option>
                               <option value="AL">Alabama</option>
@@ -206,8 +207,8 @@ export default class Signup extends Component {
                             <Form.Label>Zip</Form.Label>
                             <Form.Control
                               onChange={this.handleChange}
-                              value={this.state.phone}
-                              name="phonenumber"
+                              value={this.state.zipcode}
+                              name="zipcode"
                               type="number"
                               placeholder="75056..."
                               required

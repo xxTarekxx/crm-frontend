@@ -7,8 +7,7 @@ export default function Landing() {
 
   return (
     <div>
-      <Login />
-      <Signup />
+<Signup />
     </div>
   );
 }
