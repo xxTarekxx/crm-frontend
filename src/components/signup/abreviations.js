@@ -1,4 +1,4 @@
-[
+const unitedstates = [
     {
         "name": "Alabama",
         "abbreviation": "AL"
@@ -235,4 +235,6 @@
         "name": "Wyoming",
         "abbreviation": "WY"
     }
-]
+];
+
+export default unitedstates;
