@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
+import ResetPassword from "../reset-password/ResetPassword";
 
 export default function Log() {
   const [email, setEmail] = useState("");
@@ -30,7 +31,7 @@ export default function Log() {
               <div className="container">
                 <div className="row">
                   <div className="formBox col-lg-10 col-xl-7 mx-auto">
-                    <h3 className=" text-center">Log In To Your XYZ Account</h3>
+                    <h3 className=" mt-3 text-center">Log In To Your Account</h3>
                     <hr />
                     <form onSubmit={handleOnSubmit}>
                       <div className="loginForm mb-3 pt-4">
@@ -76,6 +77,13 @@ export default function Log() {
                           className="btn btn-primary px-5 text-uppercase mb-4 rounded-pill shadow-sm"
                         >
                           Sign in
+                        </button>
+                        <button
+                          // onClick={<ResetPassword />}
+                          type="submit"
+                          className="btn btn-primary px-5 ms-5 text-uppercase mb-4 rounded-pill shadow-sm"
+                        >
+                          Forgot Password
                         </button>
                       </div>
                     </form>

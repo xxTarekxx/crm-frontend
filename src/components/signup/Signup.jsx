@@ -72,7 +72,7 @@ export default function Signup() {
               <div className="container">
                 <div className="row">
                   <div className=" formBox col-lg-10 col-xl-7 mx-auto">
-                    <h3 className="display-4 text-center">Registration</h3>
+                    <h3 className="mt-3 text-center">Join Us for Better Business</h3>
                     <hr />
                     <Form className="py-4" onSubmit={handleOnSubmit}>
                       <Row className="mb-3">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
+import Log from "../login/Login";
 
 export default function ResetPassword() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ export default function ResetPassword() {
   function handleOnSubmit(e) {
     e.preventDefault();
     console.log(`email: ${email} password; ${password}`);
-    
+
     if (!email || !password) {
       return alert("Please fill all the fields");
     }
@@ -29,8 +30,8 @@ export default function ResetPassword() {
             <div className="landing d-flex align-items-center py-5">
               <div className="container">
                 <div className="row">
-                  <div className="formBox col-lg-10 col-xl-7 mx-auto">
-                    <h3 className=" text-center">Reset Password</h3>
+                  <div className="formBox col-lg-10 col-xl-5 mx-auto">
+                    <h3 className=" mt-3 text-center">Reset Password</h3>
                     <hr />
                     <form onSubmit={handleOnSubmit}>
                       <div className="loginForm mb-3 pt-4">
@@ -60,7 +61,7 @@ export default function ResetPassword() {
                           />
                         </FloatingLabel> */}
                       </div>
-                      {["checkbox"].map((type) => (
+                      {/* {["checkbox"].map((type) => (
                         <div key={`default-${type}`} className="mb-3">
                           <Form.Check
                             type={type}
@@ -68,7 +69,7 @@ export default function ResetPassword() {
                             label={`Remember Password`}
                           />
                         </div>
-                      ))}
+                      ))} */}
                       <div className="gap-2 mt-4 text-center">
                         <button
                           // onClick={handleOnChange}
@@ -77,7 +78,16 @@ export default function ResetPassword() {
                         >
                           Forgot Passowrd
                         </button>
+                        <button
+                        
+                          // onClick={handleOnChange}
+                          href={<Log />}
+                          className="btn btn-primary text-uppercase mb-4 mx-4 rounded-pill shadow-sm"
+                        >
+                          Login Page
+                        </button>
                       </div>
+
                     </form>
                   </div>
                 </div>
@@ -90,52 +100,9 @@ export default function ResetPassword() {
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { FloatingLabel, Form } from "react-bootstrap";
 // import React, { Component } from 'react'
 // import "./login.css";
-
 
 // export default class Login extends Component {
 //   constructor() {
@@ -154,7 +121,6 @@ export default function ResetPassword() {
 //     });
 //   }
 
-  
 //   handleOnSubmit(event){
 //     event.preventDefault();
 
