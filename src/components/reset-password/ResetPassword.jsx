@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
+import formTrigger from "../landingPage/Landing"
 import Log from "../login/Login";
 
 export default function ResetPassword() {
@@ -48,28 +49,7 @@ export default function ResetPassword() {
                             required
                           />
                         </FloatingLabel>
-                        {/* <FloatingLabel
-                          controlId="floatingPassword"
-                          label="Password"
-                        >
-                          <Form.Control
-                            onChange={handlePassword}
-                            name="password"
-                            type="password"
-                            placeholder="Password"
-                            required
-                          />
-                        </FloatingLabel> */}
                       </div>
-                      {/* {["checkbox"].map((type) => (
-                        <div key={`default-${type}`} className="mb-3">
-                          <Form.Check
-                            type={type}
-                            id={`default-${type}`}
-                            label={`Remember Password`}
-                          />
-                        </div>
-                      ))} */}
                       <div className="gap-2 mt-4 text-center">
                         <button
                           // onClick={handleOnChange}
@@ -80,8 +60,7 @@ export default function ResetPassword() {
                         </button>
                         <button
                         
-                          // onClick={handleOnChange}
-                          href={<Log />}
+                          onClick={() => formTrigger("Log")}
                           className="btn btn-primary text-uppercase mb-4 mx-4 rounded-pill shadow-sm"
                         >
                           Login Page

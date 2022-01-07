@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import Log from "../login/Login";
 import ResetPassword from "../reset-password/ResetPassword";
-import Signup from "../signup/Signup";
 import "./landing.css";
 
 export default function Landing() {
+  const [formLoading, setFormLoading] = useState("Log")
+
+  function formTrigger(frmType){
+    setFormLoading(frmType);
+  };
   return (
     <div>
-<ResetPassword />
+    {formLoading === "Log" && (
+      <Log 
+        formTrigger={formTrigger}
+      />)}
+    {formLoading === "ResetPassword" && (<ResetPassword />)}
     </div>
   );
 }

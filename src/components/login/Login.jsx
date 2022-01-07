@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
+import formTrigger from "../landingPage/Landing"
 import ResetPassword from "../reset-password/ResetPassword";
 
 export default function Log() {
@@ -79,7 +80,7 @@ export default function Log() {
                           Sign in
                         </button>
                         <button
-                          // onClick={<ResetPassword />}
+                          onClick={() => formTrigger("ResetPassword")}
                           type="submit"
                           className="btn btn-primary px-5 ms-5 text-uppercase mb-4 rounded-pill shadow-sm"
                         >
