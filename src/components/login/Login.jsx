@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
 import formTrigger from "../landingPage/Landing"
-import ResetPassword from "../reset-password/ResetPassword";
 
 export default function Log() {
   const [email, setEmail] = useState("");

@@ -4,18 +4,15 @@ import ResetPassword from "../reset-password/ResetPassword";
 import "./landing.css";
 
 export default function Landing() {
-  const [formLoading, setFormLoading] = useState("Log")
+  const [formLoading, setFormLoading] = useState("Log");
 
-  function formTrigger(frmType){
+  function formTrigger(frmType) {
     setFormLoading(frmType);
-  };
+  }
   return (
     <div>
-    {formLoading === "Log" && (
-      <Log 
-        formTrigger={formTrigger}
-      />)}
-    {formLoading === "ResetPassword" && (<ResetPassword />)}
+      {formLoading === "Log" && (<Log formTrigger={formTrigger} />)}
+      {formLoading === "ResetPassword" && (<ResetPassword formTrigger={formTrigger} />)}
     </div>
   );
 }
